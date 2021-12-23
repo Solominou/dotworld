@@ -10,7 +10,7 @@ class Simple(APIView):
     template_name = 'simplehome.html'    
 
     def get(self, request):
-        with urllib.request.urlopen("https://gauravghati.github.io/apis/buttons.json") as url:
+        with urllib.request.urlopen("https://solominou.github.io/apis/buttons.json") as url:
             data = json.loads(url.read().decode())
         return Response(data)
 
@@ -20,7 +20,7 @@ class Certificate(APIView):
     template_name = 'certifications.html'
 
     def get(self, request):
-        with urllib.request.urlopen("https://gauravghati.github.io/apis/certificates.json") as url:
+        with urllib.request.urlopen("https://solominou.github.io/apis/certificates.json") as url:
             data = json.loads(url.read().decode())
         return Response({'all_certificates': data})
 
@@ -30,7 +30,7 @@ class Projects(APIView):
     template_name = 'projects.html'
 
     def get(self, request):
-        with urllib.request.urlopen("https://gauravghati.github.io/apis/projects.json") as url:
+        with urllib.request.urlopen("https://solominou.github.io/apis/projects.json") as url:
             data = json.loads(url.read().decode())
         return Response({"allprojects": data})
 
@@ -40,7 +40,7 @@ class WorkedFor(APIView):
     template_name = 'workedfor.html'
 
     def get(self, request):
-        with urllib.request.urlopen("https://gauravghati.github.io/apis/workedfor.json") as url:
+        with urllib.request.urlopen("https://solominou.github.io/apis/workedfor.json") as url:
             data = json.loads(url.read().decode())
         return Response(data)
 
@@ -50,7 +50,7 @@ class Blogs(APIView):
     template_name = 'blogs.html'
 
     def get(self, request):
-        with urllib.request.urlopen("https://gauravghati.github.io/apis/blogs.json") as url:
+        with urllib.request.urlopen("https://solominou.github.io/apis/blogs.json") as url:
             data = json.loads(url.read().decode())
         return Response({"allblogs": data})
 
@@ -60,7 +60,7 @@ class OpenSource(APIView):
     template_name = 'opensource.html'
 
     def get(self, request):
-        with urllib.request.urlopen("https://gauravghati.github.io/apis/opensource.json") as url:
+        with urllib.request.urlopen("https://solominou.github.io/apis/opensource.json") as url:
             data = json.loads(url.read().decode())
         return Response(data)
 
@@ -78,7 +78,7 @@ class GistPages(APIView):
 
     def get(self, request, pagename):
         print(pagename)
-        with urllib.request.urlopen("https://gauravghati.github.io/apis/gistpages.json") as url:
+        with urllib.request.urlopen("https://solominou.github.io/apis/gistpages.json") as url:
             data = json.loads(url.read().decode())
         
         page = data[0]
@@ -97,7 +97,7 @@ class GistPages(APIView):
 #     template_name = 'index.html'
 
 #     def get(self, request):
-#         with urllib.request.urlopen("https://gauravghati.github.io/apis/home.json") as url:
+#         with urllib.request.urlopen("https://solominou.github.io/apis/home.json") as url:
 #             data = json.loads(url.read().decode())
 #         return Response(data)
 
